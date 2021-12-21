@@ -71,32 +71,45 @@
 #     print(int)
 #     int -= 1
 
-import random
+# import random
 
 
 names = ['dan', 'han', 'gran', 'ted']
 
 
-def guessGame(list):
-    randIdx = random.randint(0, len(list) - 1)
-    selectedValue = list[randIdx]
-    gamePlaying = True
-    attemps = 0
+# def guessGame(list):
+#     randIdx = random.randint(0, len(list) - 1)
+#     selectedValue = list[randIdx]
+#     gamePlaying = True
+#     attemps = 0
 
-    print('Guess from one of the follwing ' + list)
+#     print('Guess from one of the follwing ' + str(list))    
 
-    while(gamePlaying):
-        guess = raw_input('Guess a the random value: ')
-        attemps += 1
-        if (guess == selectedValue):
-            gamePlaying = False
-            print('You guessed ' + guess + ' and the value was ' + selectedValue)
-            print('It took you ' + str(attemps) + ' attempts!')
-            return
-        else:
-            print('Your guess is incorrect')
-            print('It has taken you ' + str(attemps) + ' attempts, and you still haven\'t got it :(')
-    return
+#     while(gamePlaying):
+#         guess = raw_input('Guess a the random value: ')
+#         attemps += 1
+#         if (guess == selectedValue):
+#             gamePlaying = False
+#             print('You guessed ' + guess + ' and the value was ' + selectedValue)
+#             print('It took you ' + str(attemps) + ' attempts!')
+#             return
+#         else:
+#             print('Your guess is incorrect')
+#             print('It has taken you ' + str(attemps) + ' attempts, and you still haven\'t got it :(')
+#     return
 
 
-guessGame(names)
+# guessGame(names)
+
+# for idx in range(0, len(names)):
+#     print(idx)
+#     print(names[idx])
+
+def power(base_num, pow_num):
+    result = 1
+    for num in range(pow_num):
+        result = result * base_num
+    
+    return result
+
+print(power(3,10))

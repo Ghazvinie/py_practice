@@ -73,27 +73,24 @@
 
 import random
 
-
+gamePlaying = False
 names = ['dan', 'han', 'gran', 'ted']
 
 
-def guessGame(list):
-    randIdx = random.randint(0, len(list) - 1)
+def guessGame(input, list):
+    randIdx = random.randint(0, len(list) -1)
     selectedValue = list[randIdx]
     gamePlaying = True
-    attemps = 0
-    while(gamePlaying):
-        guess = raw_input('Guess a the random value: ')
-        attemps += 1
+
+    while(gamePlaying): 
+        guess = raw_input('Guess a value: ')
         if (guess == selectedValue):
             gamePlaying = False
             print('You guessed ' + guess + ' and the value was ' + selectedValue)
-            print('It took you ' + str(attemps) + ' attempts!')
             return
         else:
             print('Your guess is incorrect')
-            print('It has taken you ' + str(attemps) + ' attempts, and you still haven\'t got it :(')
     return
 
 
-guessGame(names)
+guessGame('', names)

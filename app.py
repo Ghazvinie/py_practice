@@ -83,7 +83,7 @@ names = ['dan', 'han', 'gran', 'ted']
 #     gamePlaying = True
 #     attemps = 0
 
-#     print('Guess from one of the follwing ' + str(list))    
+#     print('Guess from one of the follwing ' + str(list))
 
 #     while(gamePlaying):
 #         guess = raw_input('Guess a the random value: ')
@@ -105,11 +105,22 @@ names = ['dan', 'han', 'gran', 'ted']
 #     print(idx)
 #     print(names[idx])
 
-def power(base_num, pow_num):
-    result = 1
-    for num in range(pow_num):
-        result = result * base_num
-    
-    return result
+# def power(base_num, pow_num):
+#     result = 1
+#     for num in range(pow_num):
+#         result = result * base_num
 
-print(power(3,10))
+#     return result
+
+# print(power(3,10))
+
+nest = [
+    [1, 2, 3],
+    [3, 4, 5],
+    [6, 7, 8]
+]
+
+
+for array in nest:
+    for num in array:
+        print(num)

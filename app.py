@@ -82,6 +82,9 @@ def guessGame(list):
     selectedValue = list[randIdx]
     gamePlaying = True
     attemps = 0
+
+    print('Guess from one of the follwing ' + list)
+
     while(gamePlaying):
         guess = raw_input('Guess a the random value: ')
         attemps += 1
